@@ -1,2 +1,2 @@
 # shellhacks2021
-[Watch the demo](https://www.youtube.com/watch?v=lJy1v8fZ15g)
+[Watch the demo](https://youtu.be/io7wGHA_qw0)
