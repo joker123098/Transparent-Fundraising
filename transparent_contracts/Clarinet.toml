@@ -1,0 +1,38 @@
+[project]
+name = "transparent_contracts"
+requirements = []
+costs_version = 1
+
+[contracts.transparent_contract]
+path = "contracts/transparent_contract.clar"
+depends_on = ["miamicoin-auth", "miamicoin-token", "miamicoin-core-v1"]
+
+[contracts.citycoin-vrf]
+path = "contracts/citycoin-vrf.clar"
+depends_on = []
+
+[contracts.citycoin-core-trait]
+path = "contracts/citycoin-core-trait.clar"
+depends_on = []
+
+[contracts.citycoin-token-trait]
+path = "contracts/citycoin-token-trait.clar"
+depends_on = []
+
+[contracts.miamicoin-auth]
+path = "contracts/miamicoin-auth.clar"
+depends_on = ["citycoin-core-trait", "citycoin-token-trait"]
+
+[contracts.miamicoin-token]
+path = "contracts/miamicoin-token.clar"
+depends_on = ["sip-010-trait", "miamicoin-auth", "citycoin-token-trait"]
+
+[contracts.miamicoin-core-v1]
+path = "contracts/citycoin-core-v1.clar"
+depends_on = ["miamicoin-auth", "miamicoin-token", "citycoin-vrf", "citycoin-core-trait"]
+
+# contracts listed below are used only in testing
+
+[contracts.sip-010-trait]
+path = "contracts/sip-10-ft-standard.clar"
+depends_on = []
